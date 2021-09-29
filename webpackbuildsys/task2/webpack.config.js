@@ -1,9 +1,12 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/profile/index.js',
+  entry: {
+    profile: './src/profile/index.js',
+    dashboard: './src/dashboard/index.js',
+  },
   output: {
-    filename: 'main.js',
-    path: path.join(__dirname, 'dist'),
+    filename: '[name].js',
+    path: path.join(__dirname, 'build'),
   },
 };
